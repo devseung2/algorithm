@@ -1,3 +1,4 @@
+# 백준 알고리즘 11399번 문제
 # -*- coding: utf-8 -*- 
 import sys
 
@@ -26,9 +27,9 @@ while idx < len(min_p) :
     min_p[idx] += min_p[idx-1]
     idx += 1
 
-s=0
+min_sum=0
 
 for val in min_p :
-    s += val
+    min_sum += val
 
-print(s)
+print(min_sum)
