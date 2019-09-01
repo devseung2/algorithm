@@ -3,7 +3,7 @@
 def changesCount(m_list, changes) :
     idx = 0
     count = 0
-
+ 
     while changes != 0 :
         if int(changes / m_list[idx]) != 0 :
             count += int(changes / m_list[idx])
