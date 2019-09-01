@@ -26,7 +26,7 @@ def BFS(matrix, v) :
     return q_list
 
 
-n, m, v = map(int, input().split())
+n, m, v = map(int, input().split()) 
 
 matrix = [[0 for x in range(n+1)] for y in range(n+1)]
 
