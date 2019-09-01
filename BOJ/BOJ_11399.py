@@ -4,7 +4,7 @@ import sys
 
 n = int(input())
 p = list(map(int, input().split()))
-
+ 
 if n < 1 or n > 1000:
     print("n 범위 밖(종료)")
     sys.exit(1)
