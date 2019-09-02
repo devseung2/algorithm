@@ -1,6 +1,6 @@
 # 백준 알고리즘 10610번 문제
 import sys
-
+ 
 N = input()
 
 N_list = []
