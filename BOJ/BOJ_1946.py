@@ -1,4 +1,4 @@
-# 백준 알고리즘 1936 번 문제
+# 백준 알고리즘 1946 번 문제
 import sys
 
 T = int(sys.stdin.readline().strip())
