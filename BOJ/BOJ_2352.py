@@ -1,4 +1,4 @@
-# 백준 2352 문제
+# 백준 2352번 문제
 import sys
 import bisect
 
