@@ -1,5 +1,6 @@
 # 백준 1012번 문제
 import sys
+from collections import deque
 
 T = int(sys.stdin.readline().strip())
 
@@ -12,9 +13,9 @@ for i in range(T) :
 
     _sum = 0 
     while arr :
-        visited = [arr.pop(0)]
+        visited = deque([arr.pop(0)])
         while visited :
-            p = visited.pop(0)
+            p = visited.popleft()
             _x = p[0]
             _y = p[1]
             # 위
