@@ -8,14 +8,13 @@ arr = []
 for i in range(N) :
     arr.append(list(map(str, sys.stdin.readline().strip().split())))
 
-g = [[] for i in range(len(arr))]
-
-for i in range(len(arr)) :
-    for j in range(len(arr[0])) :
+g = [[] for i in range(N)]
+for i in range(N) :
+    for j in range(N) :
         if arr[i][j] == "1" :
             g[i].append(j)
 
-for i in range(len(g)) :
+for i in range(N) :
     g_c = copy.deepcopy(g)
     if not g_c[i] :
         continue
