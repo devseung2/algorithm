@@ -5,7 +5,6 @@ from collections import defaultdict, deque
 N, M = map(int, sys.stdin.readline().strip().split())
 
 g = defaultdict(list)
-
 for i in range(M) :
     s_v, e_v = map(int, sys.stdin.readline().strip().split())
     g[s_v].append(e_v)
@@ -13,7 +12,7 @@ for i in range(M) :
 
 _sum = 0
 visited = [] 
-for start_v in g :
+for start_v in range(1,N+1) :
     if start_v in visited :
         continue
     q = deque([start_v])
@@ -25,7 +24,4 @@ for start_v in g :
                 visited.append(end_v)
     _sum += 1
     
-for i in range(1, N+1) :
-    if i not in visited :
-        _sum += 1
 print(_sum)

@@ -12,10 +12,10 @@ for i in range(M) :
 
 _sum = 0
 visited = [] 
-for g_ in g :
-    if g_ in visited :
+for v in range(1, N+1) :
+    if v in visited :
         continue
-    stack = [g_]
+    stack = [v]
     while stack :
         start_v = stack[len(stack)-1]
         if g[start_v] :
@@ -27,7 +27,4 @@ for g_ in g :
             stack.pop()
     _sum += 1
 
-for i in range(1, N+1) :
-    if i not in visited :
-        _sum += 1
 print(_sum)
