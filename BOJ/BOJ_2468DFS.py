@@ -26,7 +26,7 @@ for k in range(0, _max+1) :
     copy_arr = copy.deepcopy(arr)
     for i in range(N) :
         for j in range(N) :
-            if copy_arr[i][j] == 0 :
+            if copy_arr[i][j] <= 0 :
                 continue
             stack = [[i,j]]
             copy_arr[i][j] = 0
@@ -38,7 +38,7 @@ for k in range(0, _max+1) :
                     temp_x = dx[z] + s_x
                     temp_y = dy[z] + s_y    
                     if 0 <= temp_x < N and 0 <= temp_y < N and copy_arr[temp_x][temp_y] > k :
-                        copy_arr[temp_x][temp_y] = 0
+                        copy_arr[temp_x][temp_y] = -1
                         stack.append([temp_x, temp_y])
                         check = False
                         break
