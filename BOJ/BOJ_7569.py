@@ -1,4 +1,6 @@
 # 백준 7569번 문제
+# Python 3 컴파일 시 시간초과 : 계속 수정했지만 실패
+# PyPy3 컴파일 시 성공
 import sys
 from collections import deque
 
