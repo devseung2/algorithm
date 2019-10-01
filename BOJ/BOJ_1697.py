@@ -14,9 +14,9 @@ if N > K :
 elif N == K :
     print(0)
 else : 
-    idx = 1
     while q :
         q_count = 0
+        idx = len(q)
         if K in q :
             break
         for i in range(idx) :
@@ -31,7 +31,5 @@ else :
                 if 0 <= result <= 100000 and visited[result] == 0 :
                     visited[result] = 1
                     q.append(result)
-                    q_count += 1
         count += 1
-        idx = q_count
     print(count)
