@@ -15,11 +15,10 @@ elif N == K :
     print(0)
 else : 
     while q :
-        q_count = 0
-        idx = len(q)
+        q_size = len(q)
         if K in q :
             break
-        for i in range(idx) :
+        for i in range(q_size) :
             pop_num = q.popleft()
             for i in range(3) :
                 result = 0
