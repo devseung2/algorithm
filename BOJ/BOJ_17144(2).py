@@ -12,27 +12,29 @@ dc2 = [1,0,-1,0]
 arr = []
 air = []
 
-for i in range(R) :
+for i in range(R) : 
     arr.append(list(map(int, sys.stdin.readline().strip().split())))
     for j in range(i, len(arr)) :
         if -1 in arr[j] :
             air.append([j, arr[i].index(-1)])
     
 for t in range(T) :
-    result = copy.deepcopy(arr)
+    result = []
     for i in range(R) :
         for j in range(C) :
             if 0 < arr[i][j] :
-                val = (arr[i][j]//5)
+                val = arr[i][j]//5
                 for k in range(4) :
                     temp_r = i + dr1[k]
                     temp_c = j + dc1[k]
 
                     if 0 <= temp_r < R and 0 <= temp_c < C and arr[temp_r][temp_c] != -1 :
-                        result[temp_r][temp_c] += val
-                        result[i][j] -= val
+                        result.append([temp_r, temp_c, val])
+                        result.append([i,j,-val])
 
-    arr = copy.deepcopy(result)
+    for i, j, val in result :
+        arr[i][j] += val
+
     for air_i in range(2) :
         stack = [[air[air_i][0], air[air_i][1]+1]]
 
@@ -57,7 +59,7 @@ for t in range(T) :
             if len(stack) == 0 :
                 arr[pop_r][pop_c] = 0
                 break
-            arr[pop_r][pop_c] = result[stack[len(stack)-1][0]][stack[len(stack)-1][1]]
+            arr[pop_r][pop_c] = arr[stack[len(stack)-1][0]][stack[len(stack)-1][1]]
 
 _sum = 0
 for i in range(R) : 
