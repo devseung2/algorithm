@@ -1,5 +1,4 @@
 # 백준 2573번 문제
-import copy
 from collections import deque
 
 N, M = map(int, input().split())
